@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminarku.GO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <header class="bg-info text-white text-center py-3 mb-4">
+        <h1>Seminarku.GO</h1>
+    </header>
+    <style>
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonials {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .testimonial {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .testimonial-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .testimonial-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 20%;
+            object-fit: cover;
+        }
+
+        .testimonial-text {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            margin: 5px 0 0 0;
+        }
+
+        .divider {
+            border: 0;
+            border-top: 3px solid #00bfff;
+            margin: 15px 0;
+        }
+
+        footer {
+            background-color: white;
+            color: black;
+            width: 100%;
+            margin: 0;
+            padding: 20px 0;
+        }
+
+        footer a {
+            color: black;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .container-fluid {
+            padding: 0;
+        }
+
+        footer .row {
+            margin: 0;
+        }
+
+    </style>
+    <div class="container mb-4">
+        <div id="heroCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://dicoding-web-img.sgp1.cdn.digitaloceanspaces.com/original/event/dos-0523ed97934e40c15faab82c31482f2420241118092617.png" class="d-block w-100" alt="Event 1">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://dicoding-web-img.sgp1.cdn.digitaloceanspaces.com/original/event/dos-3ff386fb6ab6a50e4e63be4e4dc5c72220250102171207.jpg" class="d-block w-100" alt="Event 2">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://dicoding-web-img.sgp1.cdn.digitaloceanspaces.com/original/event/dos-85b99d180f9a5888a70c18843dbb99eb20241216151348.jpg" class="d-block w-100" alt="Event 2">
+                    <div class="carousel-caption d-none d-md-block">
+                </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="container mb-4">
+        <h2 class="mb-3">Daftar Acara</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="https://dicoding-web-img.sgp1.cdn.digitaloceanspaces.com/original/event/dos-offline_roadshow_2_coding_camp_2025_powered_by_dbs_foundation_goes_to_jakarta_logo_181124084205.png"  class="card-img-top" style="max-height: 200px; object-fit: cover" alt="Seminar Teknologi">
+                        <div class="card-body">
+                        <h5 class="card-title text-info">Coding Camp 2025 powered by DBS Foundation goes to Jakarta</h5>
+                        <p class="card-text">Waktu: 23 November 2024, 13:00 WITA</p>
+                        <p class="card-text">Lokasi: Ruang 101</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailModal1">Lihat Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="https://dicoding-web-img.sgp1.cdn.digitaloceanspaces.com/original/event/dos:dicoding_developer_coaching_68_back_end_belajar_konsep_pemrograman_fungsional_di_javascript_logo_101022165624.png" class="card-img-top" style="max-height: 200px; object-fit: cover" alt="Seminar Teknologi">
+                        <div class="card-body">
+                        <h5 class="card-title text-info">Developer Coaching</h5>
+                        <p class="card-text">Waktu: 27 Desember 2024, 17:00 WITA</p>
+                        <p class="card-text">Lokasi: Ruang 101</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailModal5">Lihat Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="https://dicoding-web-img.sgp1.cdn.digitaloceanspaces.com/original/event/dos-idcamp_x_dicoding_live_5_jetpack_compose_masa_depan_ui_development_di_android_logo_020125103210.png" class="card-img-top" style="max-height: 200px; object-fit: cover" alt="Workshop Pemrograman">
+                    <div class="card-body">
+                        <h5 class="card-title text-info">Jetpack Compose</h5>
+                        <p class="card-text">Waktu: 9 Januari 2025, 20:00 WITA</p>
+                        <p class="card-text">Lokasi: Aula Universitas</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailModal4">Lihat Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="https://solidernews.com/wp-content/uploads/2024/06/membangun-masa-depan-kerja-inklusif-dengan-teknologi-ai-ai.jpg" class="card-img-top" style="max-height: 200px; object-fit: cover" alt="Workshop Pemrograman">
+                    <div class="card-body">
+                        <h5 class="card-title text-info">Seminar Teknologi</h5>
+                        <p class="card-text">Waktu: 10 Januari 2025, 20:00 WITA</p>
+                        <p class="card-text">Lokasi: Aula Universitas</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailModal3">Lihat Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="https://elektro.polnep.ac.id/wp-content/uploads/2022/02/Kuliah-Umum-Desain-Web-819x1024.jpeg" class="card-img-top" style="max-height: 200px; object-fit: cover" alt="Workshop Pemrograman">
+                    <div class="card-body">
+                        <h5 class="card-title text-info">Workshop Pemrograman</h5>
+                        <p class="card-text">Waktu: 11 Januari 2025, 13:00 WITA</p>
+                        <p class="card-text">Lokasi: Ruang 101</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailModal2">Lihat Detail</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="https://dicoding-web-img.sgp1.cdn.digitaloceanspaces.com/original/event/dos:dicoding_developer_coaching_98_machine_learning_mendalami_model_image_classification_logo_200723104645.png" class="card-img-top" style="max-height: 200px; object-fit: cover" alt="Workshop Pemrograman">
+                    <div class="card-body">
+                        <h5 class="card-title text-info">Machine Learning</h5>
+                        <p class="card-text">Waktu: 14 Januari 2025, 13:00 WITA</p>
+                        <p class="card-text">Lokasi: Aula Universitas</p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailModal6">Lihat Detail</button>
+                    </div>
+                </div>
+            </div>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="modal fade" id="detailModal1" tabindex="-1" aria-labelledby="detailModal1Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detailModal1Label">Detail Acara</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="">Nama Acara</label>
+                            <input type="text" disabled class="form-control mt-1" value="Coding Camp">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="">Waktu</label>
+                            <input type="text" disabled class="form-control mt-1" value="23 November 2024, 13:00 WITA">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="">Lokasi</label>
+                            <input type="text" disabled class="form-control mt-1" value="Ruang 101">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="">Topik Materi</label>
+                            <input type="text" disabled class="form-control mt-1" value="Menciptakan keterampilan digital dan finansial">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="">Pemateri</label>
+                            <input type="text" disabled class="form-control mt-1" value="Ardianto, S.Tr.Ak., M.Acc.">
+                        </div>
+                        <div class="col-6 mt-3">
+                            <label for="" class="col-6">Harga Tiket</label>
+                            <input type="text" disabled class="form-control text-end mt-1" value="100.000">
+                        </div>
+
+                    </div>                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="detailModal2" tabindex="-1" aria-labelledby="detailModal2Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detailModal2Label">Detail Acara</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="">Nama Acara</label>
+                            <input type="text" disabled class="form-control mt-1" value="Workshop Pemrograman">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="">Waktu</label>
+                            <input type="text" disabled class="form-control mt-1" value="11 Januari 2025, 13:00 WITA">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="">Lokasi</label>
+                            <input type="text" disabled class="form-control mt-1" value="Ruang 101">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="">Topik Materi</label>
+                            <input type="text" disabled class="form-control mt-1" value="Belajar Coding Untuk Pemula menggunakan HTML dan PHP">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="">Pemateri</label>
+                            <input type="text" disabled class="form-control mt-1" value="Ardianto, S.Tr.Ak., M.Acc.">
+                        </div>
+                        <div class="col-6 mt-3">
+                            <label for="" class="col-6">Harga Tiket</label>
+                            <input type="text" disabled class="form-control text-end mt-1" value="50.000">
+                        </div>
+                    </div>                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="detailModal3" tabindex="-1" aria-labelledby="detailModal3Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detailModal3Label">Detail Acara</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="">Nama Acara</label>
+                            <input type="text" disabled class="form-control mt-1" value="Teknologi">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="">Waktu</label>
+                            <input type="text" disabled class="form-control mt-1" value="10 Januari 2025, 13:00 WITA">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="">Lokasi</label>
+                            <input type="text" disabled class="form-control mt-1" value="Aula Universitas">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="">Topik Materi</label>
+                            <input type="text" disabled class="form-control mt-1" value="Kecerdasan Buatan (AI) dan Masa Depan">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="">Pemateri</label>
+                            <input type="text" disabled class="form-control mt-1" value="Ardianto, S.Tr.Ak., M.Acc.">
+                        </div>
+                        <div class="col-6 mt-3">
+                            <label for="" class="col-6">Harga Tiket</label>
+                            <input type="text" disabled class="form-control text-end mt-1" value="100.000">
+                        </div>
+                    </div>                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="detailModal4" tabindex="-1" aria-labelledby="detailModal4Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detailModal4Label">Detail Acara</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="">Nama Acara</label>
+                            <input type="text" disabled class="form-control mt-1" value="Jetpack Compose">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="">Waktu</label>
+                            <input type="text" disabled class="form-control mt-1" value="9 Januari 2025, 20:00 WITA">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="">Lokasi</label>
+                            <input type="text" disabled class="form-control mt-1" value="Aula Universitas">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="">Topik Materi</label>
+                            <input type="text" disabled class="form-control mt-1" value="Masa Depan UI Development di Android">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="">Pemateri</label>
+                            <input type="text" disabled class="form-control mt-1" value="Adhytia Wana Putra">
+                        </div>
+                        <div class="col-6 mt-3">
+                            <label for="" class="col-6">Harga Tiket</label>
+                            <input type="text" disabled class="form-control text-end mt-1" value="100.000">
+                        </div>
+                    </div>                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="detailModal5" tabindex="-1" aria-labelledby="detailModal5Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detailModal5Label">Detail Acara</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="">Nama Acara</label>
+                            <input type="text" disabled class="form-control mt-1" value="Developer Coaching">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="">Waktu</label>
+                            <input type="text" disabled class="form-control mt-1" value="27 Desember 2024, 17:00 WITA">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="">Lokasi</label>
+                            <input type="text" disabled class="form-control mt-1" value="Aula Universitas">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="">Topik Materi</label>
+                            <input type="text" disabled class="form-control mt-1" value="Teknik Mengamankan Server RESTful API">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="">Pemateri</label>
+                            <input type="text" disabled class="form-control mt-1" value="Arsy Opraza Akma">
+                        </div>
+                        <div class="col-6 mt-3">
+                            <label for="" class="col-6">Harga Tiket</label>
+                            <input type="text" disabled class="form-control text-end mt-1" value="100.000">
+                        </div>
+                    </div>                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="detailModal6" tabindex="-1" aria-labelledby="detailModal6Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detailModal6Label">Detail Acara</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="">Nama Acara</label>
+                            <input type="text" disabled class="form-control mt-1" value="Machine Learning">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="">Waktu</label>
+                            <input type="text" disabled class="form-control mt-1" value="14 Januari 2025, 13:00 WITA">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="">Lokasi</label>
+                            <input type="text" disabled class="form-control mt-1" value="Aula Universitas">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="">Topik Materi</label>
+                            <input type="text" disabled class="form-control mt-1" value="Mendalami model Image Classification">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <label for="">Pemateri</label>
+                            <input type="text" disabled class="form-control mt-1" value="Rahmat Fajri">
+                        </div>
+                        <div class="col-6 mt-3">
+                            <label for="" class="col-6">Harga Tiket</label>
+                            <input type="text" disabled class="form-control text-end mt-1" value="100.000">
+                        </div>
+                    </div>                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="mb-3">Testimoni Pengunjung</h2>
+        <div class="testimonials">
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <img src="https://belajarbisnisinternet.com/wp-content/uploads/anna-marthiana.jpg" alt="Foto Anna Marthiana" class="testimonial-photo">
+                    <div>
+                        <p class="testimonial-text">Sangat banyak sekali dan benar-benar membuka wawasan saya bagaimana cara berbisnis sebagai internet marketer yang sesungguhnya walaupun saat ini saya masih terseok-seok tapi saya sangat yakin saya akan mampu melakukannya dengan baik sesuai dengan yang diajarkan.
+                        Yang bisa sy komentari hanya bagus, bagus sekali, sangat bagus sekali, dan ruarrrrrrrr biasa bagus bangeetttttt!!!!! baik materi, presenter (jelas, lugas, lucu, dan sangat down to earth) dan crew yg juga sangat berpengalaman, ramah, dan sangat helpful.</p>
+                        <p class="testimonial-author">- Anna Marthiana</p>
+                    </div>
+                </div>
+                <hr class="divider">
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <img src="https://belajarbisnisinternet.com/wp-content/uploads/norojono.jpg" alt="Foto Norojono" class="testimonial-photo">
+                    <div>
+                        <p class="testimonial-text">DASYAT…!!!!! Dari semua informasi pelatihan yang pernah ditawarkan ke saya, belum pernah saya merasakan keinginan yang begitu besar untuk mengikuti pelatihan / workshop ini. Dan ternyata begitu saya mengikuti dari awal / hari pertama hingga hari ketiga,
+                            saya merasa workshop seperti inilah yang selama ini saya cari karena pembahasan dan lebih banyak pada praktek yang disampaikan oleh pak Sukarto & Hianoto langsung pada point-pointnya yang dilakukan oleh para peserta sendiri mulai dari nol sampai terpasang di internet.</p>
+                        <p class="testimonial-author">- Norojono</p>
+                    </div>
+                </div>
+                <hr class="divider">
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <img src="https://belajarbisnisinternet.com/wp-content/uploads/ahmad-luthfi.jpg" alt="Foto Ahmad Luthfi" class="testimonial-photo">
+                    <div>
+                        <p class="testimonial-text">Saya belum pernah mengikuti workshop semacam ini, sehingga saya tidak tau bagaimana workshop di tempat lain. Tapi saya merasa workshop AmazonMinisite ini benar-benar bermanfaat buat saya.
+                            Materi yang diberikan tentu saja sulit untuk didapatkan di tempat lain, meskipun dengan membeli e-book. Saya merasa mendapatkan pengetahuan yang begitu detail, trik-trik dan tips-tips yang saya yakin bisa saya praktik kan setelah mengikuti workshop ini.
+                        </p>
+                        <p class="testimonial-author">- Ahmad Luthfi</p>
+                    </div>
+                </div>
+                <hr class="divider">
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <img src="https://belajarbisnisinternet.com/wp-content/uploads/yelli.jpg" alt="Foto Yelli Louw" class="testimonial-photo">
+                    <div>
+                        <p class="testimonial-text">Worshop selama 3 hari ini sangat memuaskan, mulai dari materi yang diberkan Bpk Sukarto dan Bpk Hianoto sampai dengan bantuan yang diberikan oleh para crew benar-benar sangat dahsyat, terima kasih pak.
+                            Cuma berhubung saya ini pemula jadi 3 hari ini benar-benar menguras otak, Pusing Pak tapi saya yakin dengan support yang akan diberikan oleh bapak. Saya yakin saya pasti bisa membuat minisite yang berikutnya. terimakasih pak.
+                        </p>
+                        <p class="testimonial-author">- Yelli Louw</p>
+                    </div>
+                </div>
+                <hr class="divider">
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <img src="https://belajarbisnisinternet.com/wp-content/uploads/abdillah.jpg" alt="Foto Abdillah" class="testimonial-photo">
+                    <div>
+                        <p class="testimonial-text">Workshop ini sangat bermanfaat dengan ilmu-ilmu yang FULL praktek. Saya merasa senang dapat ilmu yang banyak tentang Affiliate di Amzon. Materi yang disampaikan oleh pak Sukarto dan pak Hianoto 
+                            sangat mudah dimengerti, karena beliau selalu memberikan contoh-contoh aplikatif saat mengajar. Selain itu peserta juga didampingi crew yang siap memberikan bantuan saat peserta mengalami kesulitan. Dengan banyaknya ilmu yang 
+                            diberikan dan fasilitas yang diberikan selama workshop rasanya tidak sebanding dengan investasi yang sudah saya keluarkan untuk mengikuti workshop ini. Semoga workshop ini dapat melahirkan Internet Marketer baru yang handal yang akan dapat mendatangkan devisa buat negara tercinta INDONESIA.
+                        </p>
+                        <p class="testimonial-author">- Abdillah</p>
+                    </div>
+                </div>
+                <hr class="divider">
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <img src="https://belajarbisnisinternet.com/wp-content/uploads/tri-wahyuningsih.jpg" alt="Foto Tri Wahyuningsih" class="testimonial-photo">
+                    <div>
+                        <p class="testimonial-text">Alhamdulillah saya ucapkan setelah berhasil mengikuti Workshop Amazon Minisite Blueprint selama 3 hari ini, Manfaatnya saya rasakan banyak sekali ilmu yg luar biasa yg saya dapatkan disini mengenai internet marketing yg selama ini saya butuhkan, 
+                            materinya padat akan informasi dan pembelajaran yg bagus, saya dapat menerima dengan baik apa yg disampaikan pak Sukarto dan pak Hianoto di ruang workshop, bila tidak pun crew AMSB selalu ada untuk membantu kami, senang rasanya tidak ditinggalkan begitu saja selama proses belajar.
+                        </p>
+                        <p class="testimonial-author">- Tri Wahyuningsih</p>
+                    </div>
+                </div>
+                <hr class="divider">
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <img src="https://belajarbisnisinternet.com/wp-content/uploads/iwan-hartono.jpg" alt="Foto Iwan Hartono" class="testimonial-photo">
+                    <div>
+                        <p class="testimonial-text">Workshop ini sangat bermanfaat buat saya karena di sini saya merasa betul mendapatkan suatu blue-print, step by step guide apa yang harus dilakukan untuk memperoleh penghasilan melalui internet marketing.
+                            Lebih dari itu, saya diketuk pikiran dan hatinya dengan diingatkan, dan saya sangat setuju sekali bahwa faktor terpenting sukses bukanlah apa yang saya TAHU, tetapi apa yang saya LAKUKAN (ACTION). Dan MINDSET yang benar juga sebagai landasan yang penting.
+                            Mungkin kalau bisa saya simpulkan, apa yang saya dapatkan dari workshop ini adalah faktor KNOWLEDGE + MINDSET Tinggal saya ACTION, maka jalan menuju SUKSES akan terbuka.
+                        </p>
+                        <p class="testimonial-author">- Iwan Hartono</p>
+                    </div>
+                </div>
+                <hr class="divider">
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h5>Seminarku.GO</h5>
+                    <p>Jl. Mawar No.1<br>Kec. Mawar, Kota Bunga<br>Indonesia 12345</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Navigasi</h5>
+                    <p><a href="#">Beranda</a></p>
+                    <p><a href="#">Tentang Kami</a></p>
+                    <p><a href="#">Kontak</a></p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Ikuti Kami</h5>
+                    <p><a href="#">Facebook</a></p>
+                    <p><a href="#">Instagram</a></p>
+                    <p><a href="#">Twitter</a></p>
+                </div>
+            </div>
+            <div class="row text-center mt-3">
+                <p>&copy; 2025 Seminarku.GO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
